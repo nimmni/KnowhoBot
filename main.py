@@ -13,7 +13,7 @@ app = Client(
     bot_token=cred.BOT_TOKEN
 )
 
-@app.on_message(filters.command(["trooz"]))
+@app.on_message(filters.command(["start"]))
 
 def start(client, message):
 
