@@ -16,7 +16,7 @@ app = Client(
 @app.on_message(filters.command(["start"]))
 def start(client, message):
     client.send_message(chat_id=message.chat.id,
-                        text=f"`Hi` **{message.from_user.first_name}**\n `Join @shadow_linkz to know how to use me`")
+                        text=f"`Hi` **{message.from_user.first_name}**\n Join @shadow_linkz to know how to use me")
     
     
 @app.on_message(filters.command(["trooz"]))
