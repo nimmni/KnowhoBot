@@ -44,7 +44,7 @@ def about(client, message):
 
 @app.on_message(filters.command(["log"]))
 def stats(client, message):
-    stat = client.send_message(chat_id=message.chat.id, reply_to_message_id=message.message_id,
+    stat = client.send_message(chat_id=message.chat.id, reply_to_message_id=message.id,
                                text="`Fetching details`")
     txt = logreturn()
     stat.edit(txt)
@@ -59,7 +59,7 @@ def echo(client, message):
         firebase.put('/stats', 'total_searches', data)
     global pq
     pq = ""
-    pro = client.send_message(chat_id=message.chat.id, text="Searching...", reply_to_message_id=message.message_id)
+    pro = client.send_message(chat_id=message.chat.id, text="Searching...", reply_to_message_id=message.id)
     r_num = message.text
     num = r_num.replace("+91", "").replace(" ", "")
     frbseyename = ""
