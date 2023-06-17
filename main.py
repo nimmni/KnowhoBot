@@ -42,7 +42,7 @@ def newbt(client,callback_query):
 @app.on_message(filters.command(["about"]))
 def about(client, message):
     client.send_message(chat_id=message.chat.id, reply_to_message_id=message.message_id,
-                        text=f"`Bot`            : [Truecaller](t.me/truecalle_bot)\n`Creator :` [agentnova](t.me/shadow_linkz)\n`Language:` [Python3](https://python.org)\n`Library :` [Pyrogram](https://docs.pyrogram.org/) \n`Server  :` [Heroku](https://herokuapp.com/)",
+                        text=f"`Bot`            : [Truecaller](t.me/truecalle_bot)\n`Language:` [Python3](https://python.org)\n`Library :` [Pyrogram](https://docs.pyrogram.org/) \n`Server  :` [Heroku](https://herokuapp.com/)",
                         disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("Feedback", url="t.me/night_shadowz")]]))
 
