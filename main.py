@@ -13,6 +13,13 @@ app = Client(
     bot_token=cred.BOT_TOKEN
 )
 
+@app.on_message(filters.command(["trooz"]))
+
+def start(client, message):
+
+    client.send_message(chat_id=message.chat.id,
+
+                        text=f"`Hi` **{message.from_user.first_name}**\n `Enter the number to search...`")
 
 @app.on_message(filters.command(["trooz"]))
 def start(client, message):
