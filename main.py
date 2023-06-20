@@ -89,15 +89,7 @@ def echo(client, message):
                     elif not tjsonload['data'][0]['internetAddresses']:
                         pq = f"\n\n**----••Truecaller says----**\n\nName : `{tjsonload['data'][0]['name']}`\nCarrier : `{tjsonload['data'][0]['phones'][0]['carrier']}`"
                         frbsetrname = tjsonload['data'][0]['name']
-                        except FloodWait as fw:
-                            if int(fw.x) > 299:
-                                await client.send_message(sender, "Cancelling batch since you have floodwait more than 5 minutes.")
-                                break
-                            await asyncio.sleep(fw.x + 5)
-                            await get_bulk_msg(app, client, sender, link, i)
-                        protection = await client.send_message(sender, f"Sleeping for `{timer}` seconds to avoid Floodwaits and Protect account!")
-                        await asyncio.sleep(timer)
-                        await protection.delete()
+                        
                 else:
                     pq = "\n\n**----••Truecaller says----**\n\nNo results found 🤦🏻‍♂️"
             if tresponse.status_code == 429:
